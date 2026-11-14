@@ -5,7 +5,7 @@ from pathlib import Path
 # -------------------------------------------------
 # Load the shared library
 # -------------------------------------------------
-lib_path = Path(__file__).parent / "libhello.so"
+lib_path = Path(__file__).parent / "lib/libhello.so"
 if not lib_path.exists():
     raise FileNotFoundError(f"{lib_path} not found. Run `make` first.")
 
