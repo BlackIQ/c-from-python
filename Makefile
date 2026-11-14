@@ -3,8 +3,8 @@ CFLAGS = -Wall -Wextra -fPIC -O2 -Iinclude
 LDFLAGS = -shared
 
 SRC = src/hello.c
-OBJ = hello.o
-LIB = libhello.so
+OBJ = build/hello.o
+LIB = lib/libhello.so
 
 .PHONY: all clean
 
