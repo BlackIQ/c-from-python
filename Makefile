@@ -1,19 +1,20 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -fPIC -O2
+CFLAGS = -Wall -Wextra -fPIC -O2 -Iinclude
 LDFLAGS = -shared
 
+SRC = src/hello.c
+OBJ = hello.o
 LIB = libhello.so
-OBJS = hello.o
+
+.PHONY: all clean
 
 all: $(LIB)
 
-$(LIB): $(OBJS)
+$(LIB): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^
 
-%.o: %.c hello.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ): $(SRC) include/hello.h
+	$(CC) $(CFLAGS) -c $(SRC) -o $@
 
 clean:
-	rm -f $(OBJS) $(LIB)
-
-.PHONY: all clean
+	rm -f $(OBJ) $(LIB)
