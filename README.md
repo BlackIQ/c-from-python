@@ -1,12 +1,18 @@
 # Calling C from Python with ctypes
 
-Minimal example of writing a small C library and calling it from Python using `ctypes`.
+Minimal example of writing a small C library and calling it from Python using `ctypes`. There is another repository for [Python C API](https://github.com/BlackIQ/python-c-api) that you can check them out.
 
 Just a personal learning note.
 
-## How is it working?
+## How Does It Work?
 
-Consider we denice our functions in C. Out Python project can call those C voids! So, **MAGIC**!
+Consider we define our functions in C. Out Python project can call those C functions! So, **MAGIC**!
+
+## Requirements
+
+- Python
+- GCC
+- C compiler supported by your Python
 
 ## Setup
 
@@ -20,7 +26,7 @@ Here you should build to get lib files.
 make
 ```
 
-### Run
+## Run
 
 Then it's time to run it to see how is it working.
 
